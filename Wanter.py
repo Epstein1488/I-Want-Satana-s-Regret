@@ -1,9 +1,9 @@
 import os, time, requests
 from bs4 import BeautifulSoup
 
-NICK = os.environ["Pandicton"]
-TOKEN = os.environ["9297691351:AAFdHwT7EaaUTQZ9ZTo8N2D9EYSdntMYxrw"]
-CHAT = os.environ["8945772241"]
+NICK = os.environ["NICK"]
+TOKEN = os.environ["BOT_TOKEN"]
+CHAT = os.environ["CHAT_ID"]
 URL = f"https://www.rucoyonline.com/characters/{NICK.replace(' ', '%20')}"
 OLD = ("hour", "day", "week", "month", "year")
 
