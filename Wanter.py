@@ -17,7 +17,7 @@ def last_online():
 for _ in range(5):
     try:
         cur = last_online()
-        if cur and not any(w in cur.lower() for w in OLD):
+                if cur and (("ago" not in cur.lower()) or ("less than" in cur.lower())):
             requests.post(
                 f"https://api.telegram.org/bot{TOKEN}/sendMessage",
                 data={"chat_id": CHAT, "text": f"🟢 {NICK} в сети! ({cur})"},
